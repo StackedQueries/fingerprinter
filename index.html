@@ -284,7 +284,7 @@
         return behaviorFingerprint;
       }
 
-      function tryCatchDecorator(func) {
+      function tryCatch(func) {
         return async function (...args) {
           const elementId = args[0];
           try {
@@ -305,48 +305,48 @@
       const fingerprintingMethods = [
         {
           id: "browserFingerprint",
-          method: tryCatchDecorator(getBrowserFingerprint),
+          method: tryCatch(getBrowserFingerprint),
         },
         {
           id: "deviceFingerprint",
-          method: tryCatchDecorator(getDeviceFingerprint),
+          method: tryCatch(getDeviceFingerprint),
         },
         {
           id: "canvasFingerprint",
-          method: tryCatchDecorator(getCanvasFingerprint),
+          method: tryCatch(getCanvasFingerprint),
         },
         {
           id: "webRTCFingerprint",
-          method: tryCatchDecorator(getWebRTCFingerprint),
+          method: tryCatch(getWebRTCFingerprint),
         },
         {
           id: "fontFingerprint",
-          method: tryCatchDecorator(getFontFingerprint),
+          method: tryCatch(getFontFingerprint),
         },
         {
           id: "audioFingerprint",
-          method: tryCatchDecorator(getAudioFingerprint),
+          method: tryCatch(getAudioFingerprint),
         },
         {
           id: "batteryFingerprint",
-          method: tryCatchDecorator(getBatteryFingerprint),
+          method: tryCatch(getBatteryFingerprint),
         },
         {
           id: "geolocationFingerprint",
-          method: tryCatchDecorator(getGeolocationFingerprint),
+          method: tryCatch(getGeolocationFingerprint),
         },
         {
           id: "behavioralFingerprint",
-          method: tryCatchDecorator(getBehavioralFingerprint),
+          method: tryCatch(getBehavioralFingerprint),
         },
         {
           id: "webGLFingerprint",
-          method: tryCatchDecorator(getWebGLFingerprint),
+          method: tryCatch(getWebGLFingerprint),
         },
-        { id: "cssFingerprint", method: tryCatchDecorator(getCSSFingerprint) },
+        { id: "cssFingerprint", method: tryCatch(getCSSFingerprint) },
         {
           id: "networkFingerprint",
-          method: tryCatchDecorator(getNetworkFingerprint),
+          method: tryCatch(getNetworkFingerprint),
         },
       ];
       
